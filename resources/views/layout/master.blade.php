@@ -1,0 +1,5 @@
+@include('import.bootstrap-link')
+@include('layout.navbar')
+@yield('content')
+@include('layout.footer')
+@include('import.bootstrap-script')
