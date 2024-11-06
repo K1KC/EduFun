@@ -17,7 +17,7 @@
                     </ul>
                 </div>
                 <div class="col">
-                    <a href="{{ route('writers') }}" class="nav-link {{ (request()->is('writers')) ? 'text-primary' : '' }}">Writers</a>
+                    <a href="{{ route('writer.list') }}" class="nav-link {{ (request()->is('writer-list')) ? 'text-primary' : '' }}">Writers</a>
                 </div>
                 <div class="col">
                     <a href="{{ route('about_us') }}" class="nav-link {{ (request()->is('about-us')) ? 'text-primary' : '' }}">About Us</a>

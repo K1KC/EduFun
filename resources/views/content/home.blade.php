@@ -6,8 +6,10 @@
     <div class="postcard-list">
         <div class="row m-5 p-5 pt-3 align-self-start">
             <div class="col">
+
                 @foreach($posts as $post)
                     @include('layout.postcard', [
+                        'post_id' => $post->id,
                         'title' => $post->title,
                         'thumbnail_link' => $post->thumbnail_link,
                         'upload_date'=> $post->upload_date,
@@ -16,6 +18,7 @@
                         'description' => $post->description,
                     ])
                 @endforeach
+                
             </div>
         </div>
     </div>

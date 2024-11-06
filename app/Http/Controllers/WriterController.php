@@ -16,11 +16,13 @@ class WriterController extends Controller
 
     public function showAllWriterPost($name) {
         $postController = app(PostController::class);
-        $writer = Writer::where('name', $name)->first();
-        if($writer) {
+        $decoded_name = urldecode(trim($name));
+        $writer = Writer::where('name', $decoded_name)->first();
+        if ($writer) {
             $writer_id = $writer->id;
         } else {
-            abort(404, 'Writer not found');
+            // Handle the case where the writer is not found
+            return redirect()->route('writers')->with('error', 'Writer not found');
         }
 
         $posts = $postController->getPostPerWriter($writer_id);
