@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <img class="m-4" src="{{ asset($post->thumbnail_link) }}" alt="">
+        <img class="rounded m-5 w-50 mx-auto d-block" src="{{ asset($post->thumbnail_link) }}" alt="">
     </div>
     <div class="row">
         <div class="col"></div>
@@ -11,7 +11,7 @@
             <p>{{ $post->upload_date}}  |   by {{ $post->writer->name }}</p>
             <p>Viewers: {{ $post->viewers }}</p>
             <br><br>
-            <p>{{ $post->post_content }}</p>            
+            <p class="mb-5">{{ $post->post_content }}</p>            
         </div>
         <div class="col"></div>
     </div>

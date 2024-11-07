@@ -1,9 +1,9 @@
 <nav class="container-fluid bg-light p-3" id="navbarSupportedContent">
     <div class="row">
         <div class="col-6">
-            <h1 class="m-2">Logo</h1>
+            <img class="m-4" src="{{ asset('images/EduFun_logo.png')}}" alt="">
         </div>
-        <div class="col-6 mt-3">
+        <div class="col-6 mt-4">
             <div class="row">
                 <div class="col">
                     <a href="{{ route('/') }}" class="nav-link {{ (request()->is('/')) ? 'text-primary' : '' }}">Home</a>
