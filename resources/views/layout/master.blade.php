@@ -1,5 +1,5 @@
 @include('import.bootstrap-link')
-<div class="d-flex flex-column min-vh-100" style="background-image: url('{{ asset('images/bg.jpg') }}'); background-size: cover">
+<div class="d-flex flex-column min-vh-100">
 @include('layout.navbar')
 <main class="flex-grow-1 overflow-x-hidden">
    @yield('content') 
